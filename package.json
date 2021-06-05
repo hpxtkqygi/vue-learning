@@ -1,0 +1,21 @@
+{
+  "name": "vue-learning",
+  "version": "1.0.0",
+  "description": "vue学习笔记",
+  "main": "vue.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitee.com:honoryao/vue-learning.git"
+  },
+  "keywords": [
+    "vue学习笔记"
+  ],
+  "author": "honoryao",
+  "license": "ISC"
+}
