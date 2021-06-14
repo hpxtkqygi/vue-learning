@@ -11,13 +11,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>参数双向绑定</title>
+    <title>v-if&v-else&v-show</title>
 </head>
 <body>
-<h1>参数双向绑定</h1>
+<h1>v-if&v-else&v-show</h1>
 <hr>
 <div id="app">
-    {{message}}
+    <div v-if="isLogin">hello Honoryao</div>
+    <div v-else>请登录</div>
+    <div v-show="isLogin">你好</div>
 </div>
 
 <script src="../assets/js/vue.js"></script>
@@ -25,7 +27,8 @@
     var app= new Vue({
         el:'#app',
         data:{
-            message:'hellow world~'
+            isLogin:true,
+            isPass:false
         }
     });
 </script>
