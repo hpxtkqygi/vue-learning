@@ -1,0 +1,70 @@
+<!--
+// +----------------------------------------------------------------------
+// | Copyright (c) 2017 https://gitee.com/honoryao All rights reserved.
+// +----------------------------------------------------------------------
+// | Author: honoryao <2463523099@qq.com>
+// +----------------------------------------------------------------------
+// | Time: 2018/6/8   
+// +----------------------------------------------------------------------
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-for</title>
+</head>
+<body>
+<h1>v-for</h1>
+<hr>
+<div id="app">
+    <ul>
+        <li v-for="item in sortItems">
+            {{item}}
+        </li>
+    </ul>
+    <hr>
+    <ul>
+        <li v-for="(data,index) in student">
+           {{index}}: {{data.name}}
+        </li>
+        <li v-for="(data,index) in student">
+            {{index}}:  {{data.age}}
+        </li>
+        <li v-for="(data,index) in student">
+            {{index}}:  {{data.head}}
+        </li>
+    </ul>
+</div>
+
+<script src="../assets/js/vue.js"></script>
+<script>
+    var app= new Vue({
+        el:'#app',
+        data:{
+            items:[99,45,32,41,50],
+            student:[{
+                name:'honoryao',
+                age:22,
+                head:19
+            },{
+                name:'honoryao2',
+                age:22,
+                head:19
+            },{
+                name:'honoryao3',
+                age:22,
+                head:19
+            }]
+        },
+        computed:{
+            sortItems:function () {
+                return this.items.sort(sortNumber);
+            }
+        }
+    });
+    function sortNumber(a,b) {
+        return a-b;
+    }
+</script>
+</body>
+</html>
